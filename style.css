@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 60vh; /* Ocupa toda la altura de la ventana */
+    background: url('images/fondo.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    display: flex; /* Usamos flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Organiza elementos en columna */
+    text-align: center; /* Centra texto */
+    color: white; /* Texto blanco para contraste */
+}
+
+.hero h1 {
+    font-size: 4rem; /* Tamaño adaptable */
+    margin-bottom: 0px; /* Espacio debajo del título */
+    text-shadow: black 0.1em 0.1em 0.3em;
+}
+
+.hero h2 {
+    font-weight: 400;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/*ENCABEZADO DE CONTACTO*/
+.hero2 {
+    height: 10vh; /* Ocupa toda la altura de la ventana */
+    display: flex; /* Usamos flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Organiza elementos en columna */
+    text-align: center; /* Centra texto */
+    color: white; /* Texto blanco para contraste */
+    background-color: #212127;
+}
+
+.hero2 h1 {
+    font-size: 4rem; /* Tamaño adaptable */
+    margin-bottom: 0px; /* Espacio debajo del título */
+    text-shadow: black 0.1em 0.1em 0.3em;
+}
+
+.hero2 h2 {
+    font-weight: 400;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+
+.hero input[type="button"] {
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: white; /* Texto blanco */
+    background-color: #ee3437; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.hero input[type="button"]:hover {
+    background-color: #d02c2f; /* Color del botón al pasar el cursor */
+}
+
+/* Estilos para el Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: transparent; /* Transparente al cargar */
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 20px;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Añadimos un color al fondo del header al hacer scroll */
+header.scrolled {
+    background-color: #212127;
+}
+
+/* Estilos para el Logo */
+.logo img {
+    width: 150px;
+    margin-right: 120px;
+}
+
+/* Contenedor para la barra de navegación */
+.navbar-container {
+    display: flex;
+    justify-content: center; /* Centra el menú de navegación horizontalmente */
+    flex-grow: 1;
+}
+
+/* Estilos para la barra de navegación */
+.barra-nav ul {
+    display: flex;
+    justify-content: center; /* Asegura que el menú esté centrado */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
+}
+
+/* Estilos para los enlaces de navegación */
+.barra-nav ul li a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+
+
+.barra-nav ul li a:hover {
+    color: #ffffff;
+    background-color: #ee3437;
+}
+
+.barra-nav ul li a.active {
+    color: #ffffff;
+    background-color: #ee3437;
+}
+
+/* Estilos para el contenido principal */
+.animes-p1 {
+    padding: 0 0 100px 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Limita el ancho máximo */
+}
+
+.animes-p1 h2 {
+    font-size: 50px;
+    color: #292933;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.animes-p1 span {
+    color: #ee3437;
+}
+
+/* Contenedor general para las tarjetas */
+.general-content {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos de forma equidistante */
+    gap: 35px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Asegura que los elementos pasen a la siguiente línea */
+}
+
+/* Estilo para las tarjetas */
+.general-txt {
+    flex: 1 1 calc(20% - 20px); /* Cada item ocupa un tercio del contenedor con espacio entre ellos */
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 35px; /* Espacio inferior para separar los bloques */
+}
+
+.general-txt img {
+    width: 100%; /* La imagen ocupa el 100% del ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 25px 25px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.general-txt h3 {
+    font-size: 18px;
+    color: #292933;
+    padding: 25px 25px 10px 25px;
+}
+
+.general-txt p {
+    font-size: 16px;
+    color: #3a3a48;
+    padding: 0 25px 20px 25px;
+}
+
+/* Menu hamburguesa para pantallas pequeñas */
+.bars {
+    display: none;
+    cursor: pointer;
+}
+
+.bars .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0px;
+}
+
+/*CSS PAGINA DRAGON BALL*/
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+.header {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo img {
+    width: 120px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 20px;
+    background: #fff;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.anime-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.anime-info ul li {
+    margin: 5px 0;
+}
+
+.episodes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.episodes ul li {
+    margin: 10px 0;
+}
+
+.episodes ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.episodes ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+.final {
+    text-align: center;
+    padding: 20px;
+    background-color: #212127;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+
+
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 900px) {
+    header {
+        padding: 0px 20px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .hero {
+        height: 80vh; /* Ocupa toda la altura de la ventana */
+        display: flex; /* Usamos flexbox para centrar */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        flex-direction: column; /* Organiza elementos en columna */
+        text-align: center; /* Centra texto */
+        color: white; /* Texto blanco para contraste */
+    }
+
+    .hero h1 {
+        margin-top: 100px;
+    }
+
+    .general-content {
+        flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .general-txt {
+        flex: 1 1 100%; /* Cada tarjeta ocupa el 100% del ancho */
+        margin-bottom: 20px; /* Añadido margen entre tarjetas */
+    }
+}
